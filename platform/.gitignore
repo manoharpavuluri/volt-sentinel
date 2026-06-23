@@ -16,3 +16,34 @@ __pycache__/
 .env.*
 !.env.example
 .DS_Store
+
+# macOS
+.DS_Store
+
+# Local/generated data
+local_landing_zone/
+tmp/
+logs/
+*.log
+
+# Databricks / Spark local artifacts
+checkpoint/
+_checkpoints/
+.spark-warehouse/
+
+# Terraform local state
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+crash.log
+crash.*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local secrets
+.env
+.env.*
+!.env.example
