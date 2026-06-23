@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.rag.example
+__pycache__/
+*.pyc
+*.log
+.DS_Store

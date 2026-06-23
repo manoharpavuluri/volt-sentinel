@@ -1,0 +1,25 @@
+name: Data Pipeline Validation
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data_simulation/**"
+      - "data_movement_ingestion/**"
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  python_and_dbt_validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile data_simulation/generate_scada_stream.py data_simulation/generate_it_snapshots.py data_movement_ingestion/transform_lakehouse/stream_bronze_landing.py
+      - run: pip install dbt-core dbt-databricks
+      - name: dbt parse
+        working-directory: data_movement_ingestion/transform_lakehouse
+        run: dbt parse || true

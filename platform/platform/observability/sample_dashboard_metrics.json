@@ -1,0 +1,20 @@
+{
+  "executive_overview": {
+    "total_estimated_leakage_usd": 6420.50,
+    "open_dispute_value_usd": 6420.50,
+    "confirmed_recovery_usd": 0.0,
+    "pending_human_approvals": 1
+  },
+  "rag_quality": {
+    "rag_runs": 12,
+    "guardrail_pass_rate": 0.92,
+    "citation_coverage_rate": 1.0,
+    "average_top_similarity": 0.86
+  },
+  "llm_finops": {
+    "total_tokens": 54820,
+    "estimated_llm_cost_usd": 0.47,
+    "headroom_tokens_saved": 18400,
+    "redis_cache_hit_rate": 0.64
+  }
+}

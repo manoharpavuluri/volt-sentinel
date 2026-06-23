@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: clearway_telemetry
+
+  - name: clearway_sap
+    schema: silver
+    tables:
+      - name: asset_registry
+
+  - name: clearway_salesforce
+    schema: silver
+    tables:
+      - name: ppa_mapping
+
+  - name: iso_market
+    schema: silver
+    tables:
+      - name: curtailment_events
+      - name: market_settlements

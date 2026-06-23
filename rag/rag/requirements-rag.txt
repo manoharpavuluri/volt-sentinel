@@ -1,0 +1,12 @@
+openai>=1.40.0
+psycopg2-binary>=2.9.9
+azure-ai-formrecognizer>=3.3.3
+azure-core>=1.30.0
+upstash-redis>=1.1.0
+langgraph>=0.2.0
+requests>=2.31.0
+python-dotenv>=1.0.1
+# Optional context optimization; install from Headroom project source if enabled.
+# headroom
+opentelemetry-api>=1.25.0
+opentelemetry-sdk>=1.25.0

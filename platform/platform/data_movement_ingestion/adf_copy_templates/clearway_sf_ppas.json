@@ -1,0 +1,36 @@
+{
+  "name": "pl_ingest_clearway_sf_ppas",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_Salesforce_PPA_Mapping",
+        "type": "Copy",
+        "policy": {
+          "timeout": "0.02:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": true,
+          "secureInput": true
+        },
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "storeSettings": { "type": "FileServerReadSettings" },
+            "formatSettings": { "type": "DelimitedTextReadSettings", "columnDelimiter": "," }
+          },
+          "sink": {
+            "type": "ParquetSink",
+            "storeSettings": { "type": "AzureBlobFSWriteSettings" },
+            "formatSettings": { "type": "ParquetWriteSettings" }
+          }
+        },
+        "inputs": [{ "referenceName": "ds_local_csv_source", "type": "DatasetReference" }],
+        "outputs": [{
+          "referenceName": "ds_adls_parquet_sink",
+          "type": "DatasetReference",
+          "parameters": { "FolderPath": "clearway_salesforce/ppa_mapping" }
+        }]
+      }
+    ]
+  }
+}

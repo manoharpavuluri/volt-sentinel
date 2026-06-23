@@ -1,0 +1,16 @@
+SAMPLE PPA EXCERPT — FOR DEVELOPMENT ONLY
+Contract ID: PPA_GOOG_WILDORADO_WIND
+Asset: CW_WIND_WILDORADO
+Offtaker: Google Cloud Operations LLC
+
+Section 7.3 Curtailment Compensation
+If the project is curtailed by a grid operator instruction and the project was otherwise available to generate energy, the buyer shall compensate seller for eligible curtailed energy at the contract rate, subject to exclusions in Section 7.4.
+
+Section 7.4 Exclusions
+Curtailment compensation shall not apply during seller-caused outages, planned maintenance windows, force majeure events, telemetry failures, or periods where the project was not commercially available.
+
+Section 8.2 Settlement Adjustment
+If settlement records understate eligible compensated energy, seller may submit a billing dispute with supporting operational records, market instructions, and contract evidence within the allowed dispute window.
+
+Schedule A Contract Rate
+Contract rate: 42.50 USD per MWh for eligible compensated energy.

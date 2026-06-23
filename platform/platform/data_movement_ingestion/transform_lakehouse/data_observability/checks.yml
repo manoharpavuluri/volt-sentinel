@@ -1,0 +1,15 @@
+checks_for silver_clearway_telemetry:
+  - row_count > 0
+  - missing_count(event_id) = 0
+  - missing_count(event_ts_utc) = 0
+  - missing_count(asset_id) = 0
+  - failed rows:
+      name: measured generation must be non-negative
+      fail query: |
+        select * from silver_clearway_telemetry
+        where measured_generation_kw < 0
+  - failed rows:
+      name: expected generation must be non-negative
+      fail query: |
+        select * from silver_clearway_telemetry
+        where expected_available_kw < 0
