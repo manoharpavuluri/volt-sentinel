@@ -1,0 +1,4 @@
+sf_asset_id,sf_account_id,sf_contract_id,asset_id,asset_name,asset_type,iso_region,settlement_point,operations_owner,asset_status
+02iVS000000WILD,001VS000000GOOG,800VS000000WILD,CW_WIND_WILDORADO,Wildorado Wind,WIND,ERCOT_WEST,WILDORADO_RN,Operations Control Center,Operating
+02iVS000000DAGG,001VS000000CAUT,800VS000000DAGG,CW_SOLAR_DAGGETT,Daggett Solar,SOLAR,CAISO_SP15,DAGGETT_6_N001,Operations Control Center,Operating
+02iVS000000BLKD,001VS000000CORP,800VS000000BLKD,CW_SOLAR_BLACKDUST,Blackdust Solar,SOLAR,ERCOT_NORTH,BLACKDUST_RN,Operations Control Center,Operating

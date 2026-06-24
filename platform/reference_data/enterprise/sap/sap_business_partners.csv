@@ -1,0 +1,4 @@
+sap_customer_number,business_partner_name,sf_account_id,payment_terms,currency,credit_status,customer_group,country
+CUST-300001,Google Energy LLC,001VS000000GOOG,NET_30,USD,APPROVED,ENERGY_OFFTAKER,US
+CUST-300002,California Utility Offtaker,001VS000000CAUT,NET_30,USD,APPROVED,ENERGY_OFFTAKER,US
+CUST-300003,Corporate Renewable Buyer,001VS000000CORP,NET_30,USD,APPROVED,ENERGY_OFFTAKER,US

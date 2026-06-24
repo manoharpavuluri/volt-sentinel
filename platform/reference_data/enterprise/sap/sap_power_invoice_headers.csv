@@ -1,0 +1,4 @@
+invoice_id,sap_customer_number,offtaker_name,contract_id,company_code,invoice_period_start,invoice_period_end,invoice_date,due_date,invoice_status,currency,gross_amount_usd,paid_amount_usd,open_amount_usd
+INV-202606-WILD-001,CUST-300001,Google Energy LLC,PPA-WILDORADO-GOOGLE-001,VS01,2026-06-01,2026-06-30,2026-07-03,2026-08-02,PAID,USD,92140.00,92140.00,0.00
+INV-202606-DAGG-001,CUST-300002,California Utility Offtaker,PPA-DAGGETT-UTILITY-001,VS01,2026-06-01,2026-06-30,2026-07-03,2026-08-02,OPEN,USD,70780.75,0.00,70780.75
+INV-202606-BLKD-001,CUST-300003,Corporate Renewable Buyer,PPA-BLACKDUST-CORP-001,VS01,2026-06-01,2026-06-30,2026-07-03,2026-08-02,PARTIALLY_PAID,USD,57820.50,42820.50,15000.00

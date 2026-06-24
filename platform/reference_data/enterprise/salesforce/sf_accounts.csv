@@ -1,0 +1,4 @@
+sf_account_id,account_name,account_type,industry,sap_customer_number,commercial_owner,account_status,risk_tier
+001VS000000GOOG,Google Energy LLC,Customer,Energy,CUST-300001,Alex Morgan,Active,Standard
+001VS000000CAUT,California Utility Offtaker,Customer,Energy,CUST-300002,Alex Morgan,Active,Standard
+001VS000000CORP,Corporate Renewable Buyer,Customer,Energy,CUST-300003,Alex Morgan,Active,Standard

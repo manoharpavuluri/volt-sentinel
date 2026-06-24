@@ -1,0 +1,30 @@
+{
+  "extract_id": "enterprise_mock_extract_20260623",
+  "extract_timestamp_utc": "2026-06-24T10:07:42.068498+00:00",
+  "source_systems": [
+    {
+      "source_system": "SAP_MOCK",
+      "description": "Synthetic SAP finance and accounting extracts for VoltSentinel POC",
+      "landing_zone": "bronze/enterprise/sap/raw",
+      "files": [
+        "sap_asset_master.csv",
+        "sap_business_partners.csv",
+        "sap_power_invoice_headers.csv",
+        "sap_power_invoice_lines.csv",
+        "sap_gl_postings.csv",
+        "sap_ar_open_items.csv"
+      ]
+    },
+    {
+      "source_system": "SALESFORCE_MOCK",
+      "description": "Synthetic Salesforce commercial, contract, asset, and dispute extracts for VoltSentinel POC",
+      "landing_zone": "bronze/enterprise/salesforce/raw",
+      "files": [
+        "sf_accounts.csv",
+        "sf_contracts.csv",
+        "sf_assets.csv",
+        "sf_revenue_disputes.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+sf_dispute_id,dispute_number,sf_account_id,sf_contract_id,asset_id,contract_id,market_date,dispute_type,status,estimated_dispute_amount_usd,approved_amount_usd,owner,created_date,closed_date,source_system
+500VS0000001001,RD-0001001,001VS000000GOOG,800VS000000WILD,CW_WIND_WILDORADO,PPA-WILDORADO-GOOGLE-001,2026-05-14,Revenue Leakage,Closed - Paid,486.25,486.25,Alex Morgan,2026-05-17,2026-05-28,Salesforce_MOCK
+500VS0000001002,RD-0001002,001VS000000CORP,800VS000000BLKD,CW_SOLAR_BLACKDUST,PPA-BLACKDUST-CORP-001,2026-06-23,Revenue Leakage,In Review,183.74,0.00,Alex Morgan,2026-06-24,,Salesforce_MOCK
