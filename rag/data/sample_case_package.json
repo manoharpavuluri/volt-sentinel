@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "breach_event_id": "SAMPLE-BREACH-001",
+      "asset_id": "CW_WIND_WILDORADO",
+      "asset_name": "Wildorado Wind",
+      "asset_type": "WIND",
+      "contract_id": "PPA-WILDORADO-GOOGLE-001",
+      "offtaker_name": "Google Energy LLC",
+      "curtailment_reason": "CONGESTION",
+      "eligible_compensable_mwh": 17.675,
+      "estimated_leakage_revenue_usd": 751.19,
+      "breach_severity": "HIGH",
+
+      "invoice_id": "INV-202606-WILD-001",
+      "invoice_status": "PAID",
+      "open_amount_usd": 0.00,
+      "accounting_doc_id": "SAP-GL-2026-900001",
+      "gl_account": "400100",
+      "profit_center": "PC-WIND-TX",
+
+      "sf_account_id": "001VS000000GOOG",
+      "account_name": "Google Energy LLC",
+      "sf_contract_id": "800VS000000WILD",
+      "existing_open_dispute_flag": false,
+      "existing_dispute_number": null,
+
+      "recommended_next_action": "READY_FOR_HUMAN_REVIEW",
+
+      "evidence_context": [
+        {
+          "context_rank": 1,
+          "document_id": "DOC-PPA-WILDORADO-GOOGLE-001",
+          "document_type": "PPA",
+          "evidence_role": "CONTRACTUAL_SUPPORT",
+          "evidence_score": 95,
+          "chunk_index": 0,
+          "chunk_text": "The agreement defines compensable curtailment as ISO-directed or transmission-constrained curtailment where the facility was otherwise available to generate. Contract price is 42.50 USD per MWh."
+        },
+        {
+          "context_rank": 2,
+          "document_id": "DOC-ERCOT-CN-2026-0623-001",
+          "document_type": "ISO_CURTAILMENT_NOTICE",
+          "evidence_role": "OPERATIONAL_SUPPORT",
+          "evidence_score": 80,
+          "chunk_index": 0,
+          "chunk_text": "ERCOT curtailment notice for resource WILDORADO_WIND_RN01 cites congestion constraint WEST_EXPORT_LIMIT_345KV and reduced output during the event interval."
+        },
+        {
+          "context_rank": 3,
+          "document_id": "DOC-ERCOT-STMT-2026-0623-WILDORADO",
+          "document_type": "ISO_SETTLEMENT_STATEMENT",
+          "evidence_role": "SETTLEMENT_SUPPORT",
+          "evidence_score": 75,
+          "chunk_index": 0,
+          "chunk_text": "Settlement statement includes line item CURT_SHORTFALL for the Wildorado Wind settlement point and indicates dispute hold pending review."
+        }
+      ]
+    }
+  ]
+}
