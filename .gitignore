@@ -1,0 +1,26 @@
+
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Terraform
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+crash.log
+crash.*.log
+
+# Local/generated data
+local_landing_zone/
+tmp/
+logs/
+*.log

@@ -1,0 +1,17 @@
+{
+  "fact_record_hash": "demo_fact_20260622_ercot_wildorado_001",
+  "reconciliation_hour": "2026-06-22T14:00:00Z",
+  "asset_id": "CW_WIND_WILDORADO",
+  "iso_region": "ERCOT",
+  "associated_ppa_id": "PPA_GOOG_WILDORADO_WIND",
+  "document_version_hash": null,
+  "event_type": "grid curtailment settlement variance",
+  "expected_available_mwh": 142.3,
+  "actual_generation_mwh": 97.1,
+  "grid_curtailment_mwh": 45.2,
+  "eligible_compensable_mwh": 45.2,
+  "contract_rate_per_mwh": 42.5,
+  "expected_settlement_usd": 6047.75,
+  "actual_settlement_usd": 0.0,
+  "estimated_leakage_revenue_usd": 6047.75
+}
