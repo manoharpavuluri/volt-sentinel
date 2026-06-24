@@ -1,0 +1,19 @@
+Synthetic ERCOT Settlement Statement — Wildorado Wind
+SYNTHETIC SAMPLE FOR DEMONSTRATION ONLY
+
+1. Settlement Statement Summary
+-------------------------------
+Statement ID: ERCOT-STMT-2026-0623-WILDORADO. Market: ERCOT. Resource: WILDORADO_WIND_RN01. Settlement point: WILDORADO_RN.
+This synthetic settlement statement summarizes interval settlement values and a potential revenue leakage item detected by VoltSentinel.
+
+2. Settlement Line Items
+------------------------
+Charge Code | Description | MWh | Rate / Price | Amount
+MTR_ENERGY | Metered energy settlement quantity | 21.05 | $29.84/MWh | $628.13
+CURT_SHORTFALL | Potential compensable curtailment shortfall | 17.675 | $42.50/MWh | $751.19
+DISPUTE_HOLD | Amount pending commercial review | 17.675 | N/A | $751.19
+
+3. Reconciliation Notes
+-----------------------
+The CURT_SHORTFALL line is not an approved invoice adjustment. It represents a potential claim requiring contract review, data quality validation, and human approval.
+Related Contract ID: PPA-WILDORADO-GOOGLE-001. Related Notice ID: ERCOT-CN-2026-0623-001. Related Asset ID: CW_WIND_WILDORADO.

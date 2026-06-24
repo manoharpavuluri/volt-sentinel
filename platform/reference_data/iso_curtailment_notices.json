@@ -1,0 +1,47 @@
+[
+  {
+    "notice_id": "ERCOT-CN-2026-0623-001",
+    "iso": "ERCOT",
+    "asset_id": "CW_WIND_WILDORADO",
+    "resource_id": "WILDORADO_WIND_RN01",
+    "settlement_point": "WILDORADO_RN",
+    "curtailment_reason": "CONGESTION",
+    "constraint_name": "WEST_EXPORT_LIMIT_345KV",
+    "start_time_utc": "2026-06-23T19:20:00Z",
+    "end_time_utc": "2026-06-23T19:55:00Z",
+    "expected_available_mw": 72.4,
+    "actual_output_mw": 42.1,
+    "curtailed_mwh": 17.675,
+    "related_contract_id": "PPA-WILDORADO-GOOGLE-001"
+  },
+  {
+    "notice_id": "CAISO-CN-2026-0623-014",
+    "iso": "CAISO",
+    "asset_id": "CW_SOLAR_DAGGETT",
+    "resource_id": "DAGGETT_SOLAR_01",
+    "settlement_point": "DAGGETT_6_N001",
+    "curtailment_reason": "TRANSMISSION_CONSTRAINT",
+    "constraint_name": "SP15_IMPORT_CONSTRAINT",
+    "start_time_utc": "2026-06-23T20:05:00Z",
+    "end_time_utc": "2026-06-23T20:40:00Z",
+    "expected_available_mw": 64.8,
+    "actual_output_mw": 40.6,
+    "curtailed_mwh": 14.117,
+    "related_contract_id": "PPA-DAGGETT-UTILITY-001"
+  },
+  {
+    "notice_id": "ERCOT-CN-2026-0623-002",
+    "iso": "ERCOT",
+    "asset_id": "CW_SOLAR_BLACKDUST",
+    "resource_id": "BLACKDUST_SOLAR_RN01",
+    "settlement_point": "BLACKDUST_RN",
+    "curtailment_reason": "CONGESTION",
+    "constraint_name": "NORTH_HUB_EXPORT_LIMIT",
+    "start_time_utc": "2026-06-23T21:10:00Z",
+    "end_time_utc": "2026-06-23T21:35:00Z",
+    "expected_available_mw": 38.2,
+    "actual_output_mw": 28.4,
+    "curtailed_mwh": 4.083,
+    "related_contract_id": "PPA-BLACKDUST-CORP-001"
+  }
+]

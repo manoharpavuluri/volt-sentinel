@@ -1,0 +1,4 @@
+asset_id,asset_name,asset_type,iso,iso_region,settlement_point,resource_id,contract_id,offtaker_name,contract_rate_usd_per_mwh,congestion_curtailment_compensable,transmission_constraint_compensable,negative_price_curtailment_compensable
+CW_WIND_WILDORADO,Wildorado Wind,WIND,ERCOT,ERCOT_WEST,WILDORADO_RN,WILDORADO_WIND_RN01,PPA-WILDORADO-GOOGLE-001,Google Energy LLC,42.5,True,True,False
+CW_SOLAR_DAGGETT,Daggett Solar,SOLAR,CAISO,CAISO_SP15,DAGGETT_6_N001,DAGGETT_SOLAR_01,PPA-DAGGETT-UTILITY-001,California Utility Offtaker,38.75,True,True,False
+CW_SOLAR_BLACKDUST,Blackdust Solar,SOLAR,ERCOT,ERCOT_NORTH,BLACKDUST_RN,BLACKDUST_SOLAR_RN01,PPA-BLACKDUST-CORP-001,Corporate Renewable Buyer,45.0,True,True,False

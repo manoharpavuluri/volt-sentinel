@@ -1,0 +1,19 @@
+Synthetic ERCOT Settlement Statement — Blackdust Solar
+SYNTHETIC SAMPLE FOR DEMONSTRATION ONLY
+
+1. Settlement Statement Summary
+-------------------------------
+Statement ID: ERCOT-STMT-2026-0623-BLACKDUST. Market: ERCOT. Resource: BLACKDUST_SOLAR_RN01. Settlement point: BLACKDUST_RN.
+This synthetic settlement statement summarizes interval settlement values and a potential revenue leakage item detected by VoltSentinel.
+
+2. Settlement Line Items
+------------------------
+Charge Code | Description | MWh | Rate / Price | Amount
+MTR_ENERGY | Metered energy settlement quantity | 14.2 | $27.91/MWh | $396.32
+CURT_SHORTFALL | Potential compensable curtailment shortfall | 4.083 | $45.00/MWh | $183.74
+DISPUTE_HOLD | Amount pending commercial review | 4.083 | N/A | $183.74
+
+3. Reconciliation Notes
+-----------------------
+The CURT_SHORTFALL line is not an approved invoice adjustment. It represents a potential claim requiring contract review, data quality validation, and human approval.
+Related Contract ID: PPA-BLACKDUST-CORP-001. Related Notice ID: ERCOT-CN-2026-0623-002. Related Asset ID: CW_SOLAR_BLACKDUST.

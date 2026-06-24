@@ -1,0 +1,29 @@
+Synthetic CAISO Curtailment Notice — Daggett Solar
+SYNTHETIC SAMPLE FOR DEMONSTRATION ONLY
+
+1. Operational Curtailment Notice
+---------------------------------
+CAISO issues this synthetic operational notice for DAGGETT_SOLAR_01 at settlement point DAGGETT_6_N001.
+The instruction reflects a grid or market operating condition and is provided as evidence for operational reconciliation. This synthetic notice is not an actual ISO notice.
+
+2. Notice Details
+-----------------
+Field | Value
+Notice ID | CAISO-CN-2026-0623-014
+ISO | CAISO
+Resource ID | DAGGETT_SOLAR_01
+Asset ID | CW_SOLAR_DAGGETT
+Settlement Point | DAGGETT_6_N001
+Issue Time UTC | 2026-06-23T19:15:00Z
+Start Time UTC | 2026-06-23T20:05:00Z
+End Time UTC | 2026-06-23T20:40:00Z
+Curtailment Reason | TRANSMISSION_CONSTRAINT
+Constraint | SP15_IMPORT_CONSTRAINT
+Expected Available MW | 64.8
+Actual Output MW | 40.6
+Estimated Curtailed MWh | 14.117
+
+3. Operator Notes
+-----------------
+Resource output was limited due to SP15_IMPORT_CONSTRAINT. The resource was instructed to reduce output for the stated operating interval.
+This notice should be reconciled against SCADA telemetry, settlement statements, and applicable contract provisions before any commercial dispute is created.

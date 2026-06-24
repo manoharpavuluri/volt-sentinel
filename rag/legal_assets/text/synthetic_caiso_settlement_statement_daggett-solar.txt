@@ -1,0 +1,19 @@
+Synthetic CAISO Settlement Statement — Daggett Solar
+SYNTHETIC SAMPLE FOR DEMONSTRATION ONLY
+
+1. Settlement Statement Summary
+-------------------------------
+Statement ID: CAISO-STMT-2026-0623-DAGGETT. Market: CAISO. Resource: DAGGETT_SOLAR_01. Settlement point: DAGGETT_6_N001.
+This synthetic settlement statement summarizes interval settlement values and a potential revenue leakage item detected by VoltSentinel.
+
+2. Settlement Line Items
+------------------------
+Charge Code | Description | MWh | Rate / Price | Amount
+MTR_ENERGY | Metered energy settlement quantity | 20.3 | $31.22/MWh | $633.77
+CURT_SHORTFALL | Potential compensable curtailment shortfall | 14.117 | $38.75/MWh | $547.03
+DISPUTE_HOLD | Amount pending commercial review | 14.117 | N/A | $547.03
+
+3. Reconciliation Notes
+-----------------------
+The CURT_SHORTFALL line is not an approved invoice adjustment. It represents a potential claim requiring contract review, data quality validation, and human approval.
+Related Contract ID: PPA-DAGGETT-UTILITY-001. Related Notice ID: CAISO-CN-2026-0623-014. Related Asset ID: CW_SOLAR_DAGGETT.

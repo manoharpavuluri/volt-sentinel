@@ -1,0 +1,29 @@
+Synthetic ERCOT Curtailment Notice — Wildorado Wind
+SYNTHETIC SAMPLE FOR DEMONSTRATION ONLY
+
+1. Operational Curtailment Notice
+---------------------------------
+ERCOT issues this synthetic operational notice for WILDORADO_WIND_RN01 at settlement point WILDORADO_RN.
+The instruction reflects a grid or market operating condition and is provided as evidence for operational reconciliation. This synthetic notice is not an actual ISO notice.
+
+2. Notice Details
+-----------------
+Field | Value
+Notice ID | ERCOT-CN-2026-0623-001
+ISO | ERCOT
+Resource ID | WILDORADO_WIND_RN01
+Asset ID | CW_WIND_WILDORADO
+Settlement Point | WILDORADO_RN
+Issue Time UTC | 2026-06-23T19:15:00Z
+Start Time UTC | 2026-06-23T19:20:00Z
+End Time UTC | 2026-06-23T19:55:00Z
+Curtailment Reason | CONGESTION
+Constraint | WEST_EXPORT_LIMIT_345KV
+Expected Available MW | 72.4
+Actual Output MW | 42.1
+Estimated Curtailed MWh | 17.675
+
+3. Operator Notes
+-----------------
+Resource output was limited due to WEST_EXPORT_LIMIT_345KV. The resource was instructed to reduce output for the stated operating interval.
+This notice should be reconciled against SCADA telemetry, settlement statements, and applicable contract provisions before any commercial dispute is created.

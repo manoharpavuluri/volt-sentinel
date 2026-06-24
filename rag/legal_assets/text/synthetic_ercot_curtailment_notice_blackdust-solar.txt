@@ -1,0 +1,29 @@
+Synthetic ERCOT Curtailment Notice — Blackdust Solar
+SYNTHETIC SAMPLE FOR DEMONSTRATION ONLY
+
+1. Operational Curtailment Notice
+---------------------------------
+ERCOT issues this synthetic operational notice for BLACKDUST_SOLAR_RN01 at settlement point BLACKDUST_RN.
+The instruction reflects a grid or market operating condition and is provided as evidence for operational reconciliation. This synthetic notice is not an actual ISO notice.
+
+2. Notice Details
+-----------------
+Field | Value
+Notice ID | ERCOT-CN-2026-0623-002
+ISO | ERCOT
+Resource ID | BLACKDUST_SOLAR_RN01
+Asset ID | CW_SOLAR_BLACKDUST
+Settlement Point | BLACKDUST_RN
+Issue Time UTC | 2026-06-23T19:15:00Z
+Start Time UTC | 2026-06-23T21:10:00Z
+End Time UTC | 2026-06-23T21:35:00Z
+Curtailment Reason | CONGESTION
+Constraint | NORTH_HUB_EXPORT_LIMIT
+Expected Available MW | 38.2
+Actual Output MW | 28.4
+Estimated Curtailed MWh | 4.083
+
+3. Operator Notes
+-----------------
+Resource output was limited due to NORTH_HUB_EXPORT_LIMIT. The resource was instructed to reduce output for the stated operating interval.
+This notice should be reconciled against SCADA telemetry, settlement statements, and applicable contract provisions before any commercial dispute is created.

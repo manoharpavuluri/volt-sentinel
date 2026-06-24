@@ -1,0 +1,10 @@
+document_id,document_type,contract_id,asset_id,pdf_path,text_path
+DOC-PPA-WILDORADO-GOOGLE-001,PPA,PPA-WILDORADO-GOOGLE-001,CW_WIND_WILDORADO,rag/legal_assets/pdf/synthetic_wildorado-google-001_ppa.pdf,rag/legal_assets/text/synthetic_wildorado-google-001_ppa.txt
+DOC-ERCOT-CN-2026-0623-001,ISO_CURTAILMENT_NOTICE,PPA-WILDORADO-GOOGLE-001,CW_WIND_WILDORADO,rag/legal_assets/pdf/synthetic_ercot_curtailment_notice_wildorado-wind.pdf,rag/legal_assets/text/synthetic_ercot_curtailment_notice_wildorado-wind.txt
+DOC-ERCOT-STMT-2026-0623-WILDORADO,ISO_SETTLEMENT_STATEMENT,PPA-WILDORADO-GOOGLE-001,CW_WIND_WILDORADO,rag/legal_assets/pdf/synthetic_ercot_settlement_statement_wildorado-wind.pdf,rag/legal_assets/text/synthetic_ercot_settlement_statement_wildorado-wind.txt
+DOC-PPA-DAGGETT-UTILITY-001,PPA,PPA-DAGGETT-UTILITY-001,CW_SOLAR_DAGGETT,rag/legal_assets/pdf/synthetic_daggett-utility-001_ppa.pdf,rag/legal_assets/text/synthetic_daggett-utility-001_ppa.txt
+DOC-CAISO-CN-2026-0623-014,ISO_CURTAILMENT_NOTICE,PPA-DAGGETT-UTILITY-001,CW_SOLAR_DAGGETT,rag/legal_assets/pdf/synthetic_caiso_curtailment_notice_daggett-solar.pdf,rag/legal_assets/text/synthetic_caiso_curtailment_notice_daggett-solar.txt
+DOC-CAISO-STMT-2026-0623-DAGGETT,ISO_SETTLEMENT_STATEMENT,PPA-DAGGETT-UTILITY-001,CW_SOLAR_DAGGETT,rag/legal_assets/pdf/synthetic_caiso_settlement_statement_daggett-solar.pdf,rag/legal_assets/text/synthetic_caiso_settlement_statement_daggett-solar.txt
+DOC-PPA-BLACKDUST-CORP-001,PPA,PPA-BLACKDUST-CORP-001,CW_SOLAR_BLACKDUST,rag/legal_assets/pdf/synthetic_blackdust-corp-001_ppa.pdf,rag/legal_assets/text/synthetic_blackdust-corp-001_ppa.txt
+DOC-ERCOT-CN-2026-0623-002,ISO_CURTAILMENT_NOTICE,PPA-BLACKDUST-CORP-001,CW_SOLAR_BLACKDUST,rag/legal_assets/pdf/synthetic_ercot_curtailment_notice_blackdust-solar.pdf,rag/legal_assets/text/synthetic_ercot_curtailment_notice_blackdust-solar.txt
+DOC-ERCOT-STMT-2026-0623-BLACKDUST,ISO_SETTLEMENT_STATEMENT,PPA-BLACKDUST-CORP-001,CW_SOLAR_BLACKDUST,rag/legal_assets/pdf/synthetic_ercot_settlement_statement_blackdust-solar.pdf,rag/legal_assets/text/synthetic_ercot_settlement_statement_blackdust-solar.txt
