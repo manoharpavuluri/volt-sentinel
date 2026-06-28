@@ -1,9 +1,11 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List, Optional, TypedDict
+from typing import Any, Dict, List, TypedDict
 
 
 class RAGState(TypedDict, total=False):
+    case_source: str
+
     input_json_path: str
     output_json_path: str
     breach_event_id: str

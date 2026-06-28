@@ -9,6 +9,11 @@ from langgraph.graph import StateGraph, START, END
 from rag.orchestrator.prompts import build_case_prompt
 from rag.orchestrator.state import RAGState
 
+from rag.orchestrator.repositories import (
+    DatabricksSqlCasePackageRepository,
+    LocalJsonCasePackageRepository,
+)
+
 
 def _load_json(path: str) -> Any:
     with Path(path).open("r", encoding="utf-8") as f:
@@ -24,29 +29,28 @@ def _write_json(path: str, payload: Dict[str, Any]) -> None:
 
 
 def load_case_package(state: RAGState) -> Dict[str, Any]:
-    input_json_path = state["input_json_path"]
     requested_breach_event_id = state["breach_event_id"]
+    case_source = state.get("case_source", "local-json")
 
-    payload = _load_json(input_json_path)
+    try:
+        if case_source == "databricks-sql":
+            repository = DatabricksSqlCasePackageRepository()
+        elif case_source == "local-json":
+            input_json_path = state["input_json_path"]
+            repository = LocalJsonCasePackageRepository(input_json_path)
+        else:
+            return {
+                "validation_errors": [f"Unsupported case_source: {case_source}"],
+                "readiness_status": "BLOCKED",
+            }
 
-    if isinstance(payload, dict) and "cases" in payload:
-        cases = payload["cases"]
-    elif isinstance(payload, list):
-        cases = payload
-    elif isinstance(payload, dict):
-        cases = [payload]
-    else:
+        selected_case = repository.get_case_package(requested_breach_event_id)
+
+    except Exception as exc:
         return {
-            "validation_errors": ["Input JSON must be a case object, list of cases, or object with a cases array."],
+            "validation_errors": [f"Failed to load case package: {exc}"],
             "readiness_status": "BLOCKED",
         }
-
-    selected_case = None
-
-    for case in cases:
-        if case.get("breach_event_id") == requested_breach_event_id:
-            selected_case = case
-            break
 
     if selected_case is None:
         return {
