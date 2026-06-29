@@ -9,11 +9,13 @@ from langgraph.graph import StateGraph, START, END
 from rag.orchestrator.prompts import build_case_prompt
 from rag.orchestrator.state import RAGState
 
+
+
 from rag.orchestrator.repositories import (
     DatabricksSqlCasePackageRepository,
+    DatabricksSqlRAGResultRepository,
     LocalJsonCasePackageRepository,
 )
-
 
 def _load_json(path: str) -> Any:
     with Path(path).open("r", encoding="utf-8") as f:
@@ -241,6 +243,16 @@ def persist_result(state: RAGState) -> Dict[str, Any]:
     }
 
     _write_json(output_json_path, result)
+
+    databricks_result_id = None
+
+    if state.get("persist_to_databricks", False):
+        repository = DatabricksSqlRAGResultRepository()
+        databricks_result_id = repository.save_result(result)
+
+    result["local_output_json_path"] = output_json_path
+    result["databricks_result_written"] = databricks_result_id is not None
+    result["databricks_result_id"] = databricks_result_id
 
     return result
 

@@ -7,7 +7,9 @@ from rag.orchestrator.graph import build_graph
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run VoltSentinel LangGraph RAG case workflow.")
+    parser = argparse.ArgumentParser(
+        description="Run VoltSentinel LangGraph RAG case workflow."
+    )
 
     parser.add_argument(
         "--source",
@@ -34,6 +36,12 @@ def main():
         help="Output JSON path.",
     )
 
+    parser.add_argument(
+        "--persist-to-databricks",
+        action="store_true",
+        help="Write the RAG result back to the Databricks Gold result table.",
+    )
+
     args = parser.parse_args()
 
     if args.source == "local-json":
@@ -49,6 +57,7 @@ def main():
         "case_source": args.source,
         "breach_event_id": args.breach_event_id,
         "output_json_path": args.output_json,
+        "persist_to_databricks": args.persist_to_databricks,
     }
 
     if args.input_json:
@@ -62,6 +71,8 @@ def main():
     print("Readiness Status:", result.get("readiness_status"))
     print("Final Route:", result.get("final_route"))
     print("Approved for Salesforce:", result.get("approved_for_salesforce"))
+    print("Databricks Result Written:", result.get("databricks_result_written"))
+    print("Databricks Result ID:", result.get("databricks_result_id"))
     print()
 
     if result.get("validation_errors"):

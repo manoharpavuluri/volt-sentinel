@@ -132,3 +132,95 @@ class DatabricksSqlCasePackageRepository:
             data["evidence_context"] = []
 
         return _json_safe(data)
+
+
+import hashlib
+from datetime import timezone
+
+
+class DatabricksSqlRAGResultRepository:
+    def __init__(self):
+        self.server_hostname = _require_env("DATABRICKS_SERVER_HOSTNAME")
+        self.http_path = _require_env("DATABRICKS_HTTP_PATH")
+        self.access_token = _require_env("DATABRICKS_TOKEN")
+        self.table_name = _validate_table_name(
+            os.getenv(
+                "DATABRICKS_RAG_RESULT_TABLE",
+                "voltsentinel_gold.rag_case_explanations",
+            )
+        )
+
+    def save_result(self, result: Dict[str, Any]) -> str:
+        breach_event_id = result.get("breach_event_id") or "UNKNOWN"
+        result_seed = f"{breach_event_id}|{datetime.now(timezone.utc).isoformat()}"
+        result_id = hashlib.sha256(result_seed.encode("utf-8")).hexdigest()
+
+        validation_errors_json = json.dumps(
+            _json_safe(result.get("validation_errors", [])),
+            default=str,
+        )
+
+        case_package_json = json.dumps(
+            _json_safe(result.get("case_package", {})),
+            default=str,
+        )
+
+        evidence_used_json = json.dumps(
+            _json_safe(result.get("evidence_used", [])),
+            default=str,
+        )
+
+        query = f"""
+            INSERT INTO {self.table_name} (
+                result_id,
+                run_timestamp_utc,
+                breach_event_id,
+                readiness_status,
+                recommended_next_action,
+                final_route,
+                approved_for_salesforce,
+                validation_errors_json,
+                rag_answer,
+                case_package_json,
+                evidence_used_json,
+                source_system
+            )
+            VALUES (
+                ?,
+                current_timestamp(),
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?,
+                ?
+            )
+        """
+
+        params = [
+            result_id,
+            breach_event_id,
+            result.get("readiness_status"),
+            result.get("recommended_next_action"),
+            result.get("final_route"),
+            bool(result.get("approved_for_salesforce", False)),
+            validation_errors_json,
+            result.get("rag_answer"),
+            case_package_json,
+            evidence_used_json,
+            "LANGGRAPH_LOCAL_ORCHESTRATOR",
+        ]
+
+        with sql.connect(
+            server_hostname=self.server_hostname,
+            http_path=self.http_path,
+            access_token=self.access_token,
+        ) as connection:
+            with connection.cursor() as cursor:
+                cursor.execute(query, params)
+
+        return result_id

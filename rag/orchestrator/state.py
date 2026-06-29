@@ -5,6 +5,7 @@ from typing import Any, Dict, List, TypedDict
 
 class RAGState(TypedDict, total=False):
     case_source: str
+    persist_to_databricks: bool
 
     input_json_path: str
     output_json_path: str
@@ -22,3 +23,7 @@ class RAGState(TypedDict, total=False):
     final_route: str
 
     approved_for_salesforce: bool
+
+    local_output_json_path: str
+    databricks_result_written: bool
+    databricks_result_id: str
