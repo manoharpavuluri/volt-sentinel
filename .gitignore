@@ -24,3 +24,4 @@ local_landing_zone/
 tmp/
 logs/
 *.log
+rag/outputs/
