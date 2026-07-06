@@ -7,18 +7,18 @@ The project simulates how renewable-energy operational data, enterprise finance 
 ## Architecture Overview
 
 SCADA telemetry producer
-  - -> Azure Event Hubs Kafka-compatible endpoint
-  - -> Databricks Structured Streaming
-  - -> ADLS Bronze Delta
-  - -> Silver cleaned telemetry
-  - -> Gold revenue leakage facts
-  - -> Soda quality checks
-  - -> PPA / ISO / settlement evidence layer
-  - -> SAP + Salesforce enterprise context
-  - -> Gold RAG case package
-  - -> LangGraph RAG workflow
-  - -> Human approval queue
-  - -> Salesforce action
+  -> Azure Event Hubs Kafka-compatible endpoint
+  -> Databricks Structured Streaming
+  -> ADLS Bronze Delta
+  -> Silver cleaned telemetry
+  -> Gold revenue leakage facts
+  -> Soda quality checks
+  -> PPA / ISO / settlement evidence layer
+  -> SAP + Salesforce enterprise context
+  -> Gold RAG case package
+  -> LangGraph RAG workflow
+  -> Human approval queue
+  -> Salesforce action
 
 ## Key Capabilities
 
