@@ -45,10 +45,4 @@ platform/
 rag/
   Synthetic legal/evidence assets and LangGraph RAG orchestrator
 
-## Status
 
-This is a proof of concept designed for learning, architecture validation, and interview discussion. It is not intended to connect to real SAP, Salesforce, market, or utility systems without additional production hardening.
-
-## Security Notes
-
-Secrets are not committed to this repository. Local environment variables should be stored in .env, which is intentionally excluded from Git. Use .env.example as the template.
