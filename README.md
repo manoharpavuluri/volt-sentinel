@@ -18,7 +18,7 @@ SCADA telemetry producer
   -> Gold RAG case package
   -> LangGraph RAG workflow
   -> Human approval queue
-  -> Mocked Salesforce action
+  -> Salesforce action
 
 ## Key Capabilities
 
@@ -32,7 +32,7 @@ SCADA telemetry producer
 - Applies Soda data quality checks before downstream processing.
 - Uses LangGraph to orchestrate RAG case explanation, validation, routing, and persistence.
 - Enforces human approval before any Salesforce-style action.
-- Writes RAG results, approval records, and mocked Salesforce actions back to Databricks Gold tables.
+- Writes RAG results, approval records, and Salesforce actions back to Databricks Gold tables.
 
 ## Project Structure
 
