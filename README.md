@@ -82,7 +82,7 @@ Implemented:
 - Human approval queue
 - Salesforce action workflow
 
-## Demo Flow
+## Flow
 
 1. Generate or stream telemetry events.
 2. Process telemetry into Bronze, Silver, and Gold Delta tables.
